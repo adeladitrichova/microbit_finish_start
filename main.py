@@ -1,3 +1,16 @@
+#START
+
+elapsed = 0
+radio.set_group(1)
+RunComp.set_light_level()
+elapsed = control.millis()
+def on_light_drop():
+    if True:
+        global elapsed
+        music.play_tone(Note.C, music.beat())
+        radio.send_number(elapsed)
+RunComp.on_light_drop(on_light_drop)
+
 #FINISH
 
 radio.set_group(1)
@@ -12,18 +25,7 @@ def on_light_drop2():
         radio.on_received_number(on_received_number)
 RunComp.on_light_drop(on_light_drop2)
 
-#START
 
-elapsed = 0
-radio.set_group(1) 
-RunComp.set_light_level()
-elapsed = control.millis()
-def on_light_drop():
-    if True:
-        global elapsed
-        music.play_tone(Note.C, music.beat())
-        radio.send_number(elapsed)
-RunComp.on_light_drop(on_light_drop)
  
 
  

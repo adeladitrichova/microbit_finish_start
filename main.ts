@@ -1,3 +1,16 @@
+// START
+let elapsed = 0
+radio.setGroup(1)
+RunComp.SetLightLevel()
+elapsed = control.millis()
+RunComp.OnLightDrop(function on_light_drop() {
+    if (true) {
+        
+        music.playTone(Note.C, music.beat())
+        radio.sendNumber(elapsed)
+    }
+    
+})
 // FINISH
 radio.setGroup(1)
 RunComp.SetLightLevel()
@@ -9,19 +22,6 @@ RunComp.OnLightDrop(function on_light_drop2() {
                 basic.showNumber(elapsed)
             })
         })
-    }
-    
-})
-// START
-let elapsed = 0
-radio.setGroup(1)
-RunComp.SetLightLevel()
-elapsed = control.millis()
-RunComp.OnLightDrop(function on_light_drop() {
-    if (true) {
-        
-        music.playTone(Note.C, music.beat())
-        radio.sendNumber(elapsed)
     }
     
 })
